@@ -1,16 +1,32 @@
-### Hi there 👋
+## Hi there! 👋
 
-<!--
-**markusunger/markusunger** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I am a software engineer from Leipzig, Germany, currently working for [WTL Ventures](https://wtl.ventures/).
 
-Here are some ideas to get you started:
+```typescript
+export class PersonalProfile {
+  readonly data = {
+    firstName: "Markus",
+    lastName: "Unger",
+    age: 37,
+  };
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+  constructor() {
+    this.printInfo();
+  }
+
+  private printInfo() {
+    console.log(JSON.stringify(this.data, undefined, 2));
+    console.log(
+      `Tech: ${[
+        "JavaScript/TypeScript",
+        "Ruby",
+        "React/React Native/Redux/RxJS",
+        "Node.js/Express",
+        "HTML/CSS",
+        "SQL/NoSQL",
+      ].join(", ")}`
+    );
+    console.log("Other interests: 📸, 📖, 🎮, 🎲");
+  }
+}
+```
